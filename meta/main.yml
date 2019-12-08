@@ -1,0 +1,34 @@
+---
+galaxy_info:
+  author: https://github.com/tehtbl
+  role_name: base_packages
+  description: Install and configure base packages on a system.
+  license: GNU General Public License v3.0
+  company: None
+  min_ansible_version: 2.8
+
+  platforms:
+    - name: Debian
+      versions:
+        - buster
+        - sid
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+
+  galaxy_tags:
+    - base
+    - packages
+    - installer
+    - client
+    - server
+    - system
+    - debian
+    - ubuntu
+    - linux
+
+dependencies:
+  - tehtbl.bootstrap
+  - tehtbl.update
+  - tehtbl.reboot
