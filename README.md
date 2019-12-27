@@ -4,7 +4,7 @@
 Role Description
 ================
 
-Install and configure base_packages on a system.
+Install and configure base packages on your system.
 
 Example Playbook
 ================
@@ -13,18 +13,29 @@ This example is taken from `molecule/default/playbook.yml` and is tested on each
 
 ```yaml
 ---
-# ------------------------------------------------------------------------
-# Install and configure base_packages
-# ------------------------------------------------------------------------
-- name: base_packages
+- name: Converge
   hosts: all
   become: true
   gather_facts: false
 
   roles:
-    - role: tehtbl.bootstrap
-    - role: tehtbl.base_packages
+    - tehtbl.role: base_packages
       base_packages_parameter: value
+
+```
+
+The machine you are running this on, may need to be prepared, I use this playbook to ensure everything is in place to let the role work.
+
+```yaml
+---
+- name: Prepare
+  hosts: all
+  become: true
+  gather_facts: false
+
+  roles:
+    - tehtbl.role: tehtbl.bootstrap
+
 ```
 
 Role Variables
@@ -36,12 +47,11 @@ Requirements
 ============
 
 - Access to a repository containing packages, likely on the internet.
-- A recent version of Ansible (Tests run on the current, previous and next release of Ansible).
+- A recent version of Ansible. (Tests run on the current, previous and next release of Ansible.)
 
 The following roles can be installed to ensure all requirements are met, using `ansible-galaxy install -r requirements.yml`:
 
 ```yaml
----
 - tehtbl.bootstrap
 - tehtbl.update
 - tehtbl.reboot
@@ -126,7 +136,7 @@ vagrant up
 License
 =======
 
-GNU General Public License v3.0
+MIT License
 
 Author Information
 ==================

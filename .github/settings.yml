@@ -1,4 +1,4 @@
 ---
 repository:
-  description: Install and configure base packages on a system.
+  description: Install and configure base packages on your system.
   homepage: https://github.com/tehtbl/ansible-role-base_packages

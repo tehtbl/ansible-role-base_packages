@@ -2,8 +2,8 @@
 galaxy_info:
   author: https://github.com/tehtbl
   role_name: base_packages
-  description: Install and configure base packages on a system.
-  license: GNU General Public License v3.0
+  description: Install and configure base packages on your system.
+  license: MIT License
   company: None
   min_ansible_version: 2.8
 
@@ -18,9 +18,6 @@ galaxy_info:
         - bionic
 
   galaxy_tags:
-    - base
-    - packages
-    - installer
     - client
     - server
     - system
@@ -28,7 +25,4 @@ galaxy_info:
     - ubuntu
     - linux
 
-dependencies:
-  - tehtbl.bootstrap
-  - tehtbl.update
-  - tehtbl.reboot
+dependencies: []
