@@ -6,4 +6,3 @@
 
   roles:
     - role: base_packages
-      base_packages_parameter: value
