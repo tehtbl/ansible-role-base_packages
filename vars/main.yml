@@ -17,7 +17,6 @@ _mypackages_packages:
     - pwgen
     - figlet
     - cowsay
-    - glances
     - aptitude
     - logrotate
     - ca-certificates
